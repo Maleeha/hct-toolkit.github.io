@@ -1,2 +1,3 @@
-# hct-toolkit.github.io
-This is Health Care Transition Toolkit for providers and families in Oklahoma which will be periodically updated
+http://hct-toolkit.github.io
+
+This is a Health Care Transition Toolkit with resources for providers and families in Oklahoma
