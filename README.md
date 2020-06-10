@@ -4,7 +4,7 @@ This is a Health Care Transition Toolkit with resources for providers and famili
 
 
 Contributors to the resource-guide content arrangement:
-- Maleeha Shahid
-- Himani Radadiya aka Patel
-- Trevor Harkness
+- Maleeha Shahid MD, MPH, MSHR
+- Himani Radadiya aka Patel MPH, BDS
+- Trevor Harkness, MPH
 - Sooner SUCCESS, Section on Developmental and Behavioral Pediatrics, University of Oklahoma Health Sciences Center
