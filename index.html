@@ -1481,6 +1481,22 @@ border-bottom: 1px solid #fcfcfc;
 
 });
 </script>
+<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
+// v0.0.1
+// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
+
+document.addEventListener('DOMContentLoaded', function() {
+  const codeList = document.getElementsByClassName("sourceCode");
+  for (var i = 0; i < codeList.length; i++) {
+    var linkList = codeList[i].getElementsByTagName('a');
+    for (var j = 0; j < linkList.length; j++) {
+      if (linkList[j].innerHTML === "") {
+        linkList[j].setAttribute('aria-hidden', 'true');
+      }
+    }
+  }
+});
+</script>
 
 
 
@@ -1519,12 +1535,12 @@ $(document).ready(function () {
       <li><a href="#provider-education"><strong><span style="color:darkcyan">Provider Education</span></strong></a></li>
       <li><a href="#professional-recommendations"><strong><span style="color:darkcyan">Professional Recommendations</span></strong></a></li>
       <li><a href="#six-core-elements-of-healthcare-transition"><strong><span style="color:darkcyan">Six Core Elements of Healthcare Transition</span></strong></a><ul>
-      <li><a href="#care-policyguide"><strong><span style="color:">Care Policy/Guide</span></strong></a></li>
-      <li><a href="#tracking-and-monitoring"><strong><span style="color:">Tracking and Monitoring</span></strong></a></li>
-      <li><a href="#transition-readiness"><strong><span style="color:">Transition Readiness</span></strong></a></li>
-      <li><a href="#transition-planning"><strong><span style="color:">Transition Planning</span></strong></a></li>
-      <li><a href="#transfer-of-care"><strong><span style="color:">Transfer of Care</span></strong></a></li>
-      <li><a href="#transfer-completion"><strong><span style="color:">Transfer Completion</span></strong></a></li>
+      <li><a href="#care-policyguide"><strong><span style="color:lightseagreen">Care Policy/Guide</span></strong></a></li>
+      <li><a href="#tracking-and-monitoring"><strong><span style="color:lightseagreen">Tracking and Monitoring</span></strong></a></li>
+      <li><a href="#transition-readiness"><strong><span style="color:lightseagreen">Transition Readiness</span></strong></a></li>
+      <li><a href="#transition-planning"><strong><span style="color:lightseagreen">Transition Planning</span></strong></a></li>
+      <li><a href="#transfer-of-care"><strong><span style="color:lightseagreen">Transfer of Care</span></strong></a></li>
+      <li><a href="#transfer-completion"><strong><span style="color:lightseagreen">Transfer Completion</span></strong></a></li>
       </ul></li>
       <li><a href="#condition-specific-resources"><strong><span style="color:darkcyan">Condition-Specific Resources</span></strong></a><ul>
       <li><a href="#cerebral-palsy"><strong><span style="color:darkcyan">Cerebral Palsy</span></strong></a></li>
@@ -1593,20 +1609,20 @@ $(document).ready(function () {
 <h1><strong><span style="color:darkcyan">Six Core Elements of Healthcare Transition</span></strong></h1>
 <p>Got Transition’s Six Core Elements of Health Care Transition is the widely adopted approach assists providers and caregivers with dedicated guides and assessments that focus on developing dialogue and resources for affected youth. Listed below are the six Core Elements as well as link for the Got Transition Elements package that provides specific guides and assessments:</p>
 <div id="care-policyguide" class="section level2">
-<h2><strong><span style="color:">Care Policy/Guide</span></strong></h2>
+<h2><strong><span style="color:lightseagreen">Care Policy/Guide</span></strong></h2>
 <p>This element stresses the importance of developing a transition and care policy/guide with the input from youth and parents/caregivers that describes the approach to transition. Included is the need to educate all staff about the approach to transition as well as clearly defining distinct roles of the youth, parent/caregiver, and pediatric and adult health care team in the transition process taking into account cultural preferences. And finally this guide should be displayed where it is accessible and can be discussed further.</p>
 </div>
 <div id="tracking-and-monitoring" class="section level2">
-<h2><strong><span style="color:">Tracking and Monitoring</span></strong></h2>
+<h2><strong><span style="color:lightseagreen">Tracking and Monitoring</span></strong></h2>
 <p>This element creates the need for proper criteria and processes for identifying transition aged youth to be established. When possible tracking should be integrated into electronic medical records for ease of access.</p>
 </div>
 <div id="transition-readiness" class="section level2">
-<h2><strong><span style="color:">Transition Readiness</span></strong></h2>
+<h2><strong><span style="color:lightseagreen">Transition Readiness</span></strong></h2>
 <p>It is very important to assess youth’s transition readiness and self-care skills. Using a standardized tool for transition assessment is a key for engaging youth and their families to set their health priorities and prepare them for an adult approach to care at age 18 and navigating the adult health care system including health insurance.</p>
 <p>It is important to note that the point of a transition assessment is not to simply to score an adolescent, but in reality it should generate a dialogue between clinicians and youth and parents/caregivers about the skills needed and then how to learn these skills.<br />
 The organization Got Transition has several transition readiness assessment tools for youth as well as their parents/ caregivers and also for you with intellectual disabilities or developmental disabilities and for their parents/ caregivers.</p>
 <div id="oklahoma-healthy-transitions-initiative-ohti" class="section level3">
-<h3><strong><span style="color:">Oklahoma Healthy Transitions Initiative (OHTI)</span></strong></h3>
+<h3><strong><span style="color:cadetblue">Oklahoma Healthy Transitions Initiative (OHTI)</span></strong></h3>
 <p>The Oklahoma Healthy Initiative (OHTI) focuses on the best efforts of the state of Oklahoma and local level partnerships for youth and young adults ages 16-25 with serious mental health conditions. The information below are helpful tools in order to assists this vulnerable group with transitioning to adulthood.</p>
 <p>For more information visit:</p>
 <p><a href="https://www.ok.gov/odmhsas/documents/OHTI%20Program%20Overview2.pdf">Information about OHTI</a></p>
@@ -1619,7 +1635,7 @@ The organization Got Transition has several transition readiness assessment tool
 <p><a href="http://sys.mahec.net/media/brochures/3_changing_role_youth.doc">Transitions-Changing Role for Youth</a></p>
 </div>
 <div id="condition-specific-transition-readiness-assessment-are-also-available-below" class="section level3">
-<h3><strong><span style="color:">Condition-Specific Transition Readiness Assessment are also available below</span></strong></h3>
+<h3><strong><span style="color:cadetblue">Condition-Specific Transition Readiness Assessment are also available below</span></strong></h3>
 <p><a href="http://www.acponline.org/sites/default/files/documents/clinical_information/high_value_care/clinician_resources/pediatric_adult_care_transitions/gim_dd/idd_transition_readiness_assessment_for_youth.docx">Transition Readiness Assessment for youth with Intellectual/Developmental Disiabilities</a></p>
 <p><a href="http://www.acponline.org/sites/default/files/documents/clinical_information/high_value_care/clinician_resources/pediatric_adult_care_transitions/gim_dd/idd_transition_readiness_assessment_for_caregivers_of_youth.docx">Transition Readiness Assessment for Parents/Caregivers of youth with Intellectual/Developmental Disabilities</a></p>
 <p><a href="http://www.acponline.org/sites/default/files/documents/clinical_information/high_value_care/clinician_resources/pediatric_adult_care_transitions/gim_pd/transition_readiness_assessment_for_youth_final.docx">Transition Readiness Assessment for youth with Physical Disabilities</a></p>
@@ -1631,15 +1647,15 @@ The organization Got Transition has several transition readiness assessment tool
 </div>
 </div>
 <div id="transition-planning" class="section level2">
-<h2><strong><span style="color:">Transition Planning</span></strong></h2>
+<h2><strong><span style="color:lightseagreen">Transition Planning</span></strong></h2>
 <p>The planning element includes making sure that the plan of care includes readiness assessment findings, youths goals, medical summary and emergency care plan. The reason behind this is because it is vital for providers to have all of these documents as well as have a way to regularly update and develop action steps. Preparing the youth for healthcare transition revolves around constantly updating and improving on these resources as well as determining decision-making supports, compiling legal resources, identifying an adult clinician(s) for future care, and obtaining consent from parent/caregiver for release of medical records. It can be daunting at first with the planning element, but as constant updates are made, and communication improved between provider and patient, healthcare transition will occur naturally and smoothly.</p>
 </div>
 <div id="transfer-of-care" class="section level2">
-<h2><strong><span style="color:">Transfer of Care</span></strong></h2>
+<h2><strong><span style="color:lightseagreen">Transfer of Care</span></strong></h2>
 <p>Transfer of care revolves around understanding what the youth needs, and what avenue can be took to ensure these needs are met. Steps that are essential for transfer of care include, completing transfer package, confirming date of first adult clinician appointment, prepare letter for adult clinician detailing how best assist the youth with special needs, and knowing that sometimes transfer of care dates need to be pushed back because of unforeseen circumstances.</p>
 </div>
 <div id="transfer-completion" class="section level2">
-<h2><strong><span style="color:">Transfer Completion</span></strong></h2>
+<h2><strong><span style="color:lightseagreen">Transfer Completion</span></strong></h2>
 <p>The transfer completion element can often be seen as following up on the healthcare transition process. Steps that need to be took include, contacting youth/young adult and parent/caregiver 3-6 months after last pediatric visit to confirm attendance at first adult appointment, communicated with adult practice answering concerns or questions, and lastly building ongoing and collaborative partnerships with adult primary and specialty care clinicians.</p>
 </div>
 </div>
